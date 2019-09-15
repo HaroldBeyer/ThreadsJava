@@ -1,4 +1,4 @@
-package br.ucsal.threads;
+package br.ucsal.threads.pilha;
 
 public class Producer2 implements Runnable{
 	private Pilha pilha;
@@ -8,10 +8,10 @@ public class Producer2 implements Runnable{
 	}
 	@Override
 	public void run() {
-		for(char letra : letras) {
-			this.pilha.push(letra);
+		for (int i = 0; i < letras.length; i++) {
+			pilha.push(letras[i]);
 		}
-		// TODO Auto-generated method stub
+		System.out.println("PRODUCER DONE!");
 		
 	}
 
